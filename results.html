@@ -84,7 +84,7 @@
                 c.height = 1600;
                 var ctx = c.getContext("2d");
                 ctx.fillStyle = "#EEEEEE"
-                ctx.fillRect(0, 0, 1850, 1700);
+                ctx.fillRect(0, 0, 1850, 1600);
                 ctx.drawImage(background, 0, 0);
     
                 var dot = c.getContext("2d");
@@ -105,12 +105,12 @@
                 ctx.font="50px Montserrat"
                 ctx.textAlign="center"
                 ctx.fillStyle="#222222"
-                ctx.fillText("消极-积极轴线 (x): " + x_axis, 725, 1375)
-                ctx.fillText("外在-内在轴线 (y): " + y_axis, 725, 1450)
-                ctx.fillText("有序-可变轴线 (z): " + z_axis, 725, 1525)
+                ctx.fillText("消极-积极轴线 (x): " + x_axis, 725, 1355)
+                ctx.fillText("外在-内在轴线 (y): " + y_axis, 725, 1430)
+                ctx.fillText("有序-可变轴线 (z): " + z_axis, 725, 1505)
                 ctx.textAlign="right"
                 ctx.font="60px Montserrat"
-                ctx.fillText("genderrealism.github.io/gendertest", 1820, 1660)
+                ctx.fillText("genderrealism.github.io/gendertest", 1820, 1560)
 
                 document.getElementById("banner").src = c.toDataURL();
             }
