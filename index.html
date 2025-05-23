@@ -1,0 +1,55 @@
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99715444-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99715444-7');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <title>性别观念坐标系</title>
+    <link rel="icon" type="x-icon" href="icon.png">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<h1 class="title">性别观念坐标系</h1>
+    <svg id="svgHeader" style="width: 100%;" viewBox="0 0 112 19">
+		<text x="50%" y="15" class="svgHeader">SapplyValues</text>
+	</svg>
+    <hr>
+    <img src="" id="banner">
+    <button class="button" onclick="location.href='instructions.html';">立刻开始!</button>
+
+    <h2>性别观念坐标系是什么？</h2>
+	<br /><br/>
+        <p>性别观念坐标系是由德国克莱登大学性别研究中心出品的最新测试，用于检测你对性别（Gender）这个概念的理解方式。本测试使用了<a href="https://8values.github.io/">8values</a>的UI。你将看到一些陈述，然后你将回答对该陈述的看法，从非常同意到非常不同意，每个答案都会略微影响你的分数。为获得准确结果，请诚实回答，但不诚实也没关系。
+		<br /><br />
+        问题数目： <b><u><span id="numOfQuestions"></span></u></b> </p>
+    <script type="application/javascript" src="questions.js"></script>
+    <script type="text/javascript">
+        document.getElementById("numOfQuestions").innerHTML = questions.length;
+
+        window.onload = function() {
+            var background = new Image();
+            background.onload = function() {
+                var c = document.createElement("canvas");
+                c.width = 1850;
+                c.height = 1300;
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#EEEEEE"
+                ctx.fillRect(0, 0, 1850, 1300);
+                ctx.drawImage(background, 0, 0);
+
+                document.getElementById("banner").src = c.toDataURL();
+            }
+            background.src = "./compass.png";
+        }
+    </script>
+</body>

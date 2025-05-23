@@ -1,0 +1,135 @@
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99715444-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99715444-7');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <title>性别坐标系结果</title>
+    <link rel="icon" type="x-icon" href="icon.png">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+    <h1 class="title">性别坐标系测试</h1>
+    <svg id="svgHeader" style="width: 100%;" viewBox="0 0 112 19">
+        <text x="50%" y="15" class="svgHeader">性别坐标系测试</text>
+    </svg>
+    <hr>
+    
+	<h2 class="title">结果</h2></br>
+    </br>
+    <svg id="svgHeader" style="width: 100%;" viewBox="0 0 112 19">
+		<text x="50%" y="15" class="svgHeader">结果</text>
+	</svg>
+    
+         <div class="result-container">
+        <img src="" id="banner" class="result-image"></img>
+        <p class="text-center">
+            <strong>你的立场最接近于</strong>
+        </p>
+        <p id="positionDescription" class="description"></p>
+
+        <h2 class="subheading">这些坐标有什么含义？</h2>
+        <p class="description">
+            <strong>y轴：性别的本质</strong><br>
+            <span class="description-detail">内在的：认为性别是天生的、深植于个体内部的本质属性，可能与大脑结构、基因、荷尔蒙或某种内在身份认同紧密相关。</span><br>
+            <span class="description-detail">外在的：认为性别主要是社会文化建构的产物，是通过社会互动、规范、期望和权力关系塑造和习得的，而非天生如此。</span><br><br>
+
+            <strong>x轴：性别的作用：</strong><br>
+            <span class="description-detail">积极的：认为性别具有积极意义或功能，例如提供身份认同、社会秩序、文化多样性等。</span><br>
+            <span class="description-detail">消极的：认为性别主要带来压迫、限制、不平等或冲突，阻碍个体发展和社会公正。</span><br><br>
+
+            <strong>z轴：性别的界限：</strong><br>
+            <span class="description-detail">有序的：认为性别类别是明确的、有限的、坚固的。</span><br>
+            <span class="description-detail">可变的：认为性别类别是模糊的、多样的、可变的。</span><br>
+        </p>
+
+        <button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">返回</button>
+	 </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        x_axis  = parseFloat(urlParams.get("positive"))
+        y_axis  = parseFloat(urlParams.get("essentialist"))
+        z_axis  = parseFloat(urlParams.get("rigid"))
+
+	function getPositionDescription(x, y, z) {
+            let description = '';
+            if (x > 0 && y > 0 && z > 0) {
+                description = '传统本质主义: 你认为性别差别是天生的，这种差异是自然的、有益的，构成了社会和谐与家庭稳定的基础。性别角色和分工是神圣或自然赋予的，应当被维护。<br><br>你可能：<br>自认为保守主义者。<br>信仰宗教。';
+            } else if (x < 0 && y > 0 && z > 0) {
+                description = '性别悲观主义: 你认为性别差异具有生理基础且界限分明，但认为这些天性导致了不可避免的性别冲突、不平等或压迫。<br><br>你可能：<br>要么自认女权，要么自认反女权。<br>热衷于线上性别战争。';
+            } else if (x > 0 && y < 0 && z > 0) {
+                description = '性别规范主义: 你认为性别角色和规范是社会为了有效运作而建构出来的，对于维持社会稳定和分工有积极作用。<br><br>你可能：<br>认为需要建立新的男性/女性气质。<br>有时被称作保守派，但自认开明。';
+            } else if (x < 0 && y < 0 && z > 0) {
+                description = '性别废除主义：你认为性别是社会建构的、压迫性的二元结构，性别规范是维护系统性不平等和压迫的制度，目标是废除性别这一社会范畴来实现解放。<br><br>你可能：<br>受到激进女性主义的影响。<br>认为“解构”性别只是空谈，所谓多元性别只是在加强性别制度。';
+            } else if (x > 0 && y > 0 && z < 0) {
+                description = '内在性别论: 你相信性别是深植于个体内心的身份认同，每个人都有权利认识和表达自己真实的内在性别，并由此获得幸福。<br><br>你可能：<br>对自己的性别表达有强烈的执念。<br>觉得‘脱跨入顺’是可能的。';
+            } else if (x < 0 && y > 0 && z < 0) {
+                description = '性别困境论: 你认为性别身份虽然深植内心，但只是一种幻象，使得个体经历深刻的痛苦、疏离和歧视，无法认知真实的自我。<br><br>你可能：<br>觉得自己就是被性别害了。<br>需要一个抱抱。';
+            } else if (x > 0 && y < 0 && z < 0) {
+                description = '性别自由主义: 你认为性别主要是一种社会文化表达和个人选择，其多样性和流动性是积极的，个体有权自由探索、定义和表达自己的性别，社会应为此提供空间和支持。<br><br>你可能：<br>自认为进步派。<br>在bio里标着人称代词they。';
+            } else if (x < 0 && y < 0 && z < 0) {
+                description = '性别解构主义: 你认为性别是社会建构的权力话语和表演，其规范具有压迫性。但通过不断解构、戏仿和扰乱性别规范，可以暂时揭示其虚构性并争取个体自由。<br><br>你可能：<br>自称酷儿。<br>认为“心理性别”或者“内在性别”这种表述并不好。';
+            }
+            return description;
+        }
+	    
+       document.getElementById("positionDescription").innerHTML = getPositionDescription(x_axis, y_axis, z_axis);
+	    
+        window.onload = function() {
+            var background = new Image();
+            background.onload = function() {
+                var c = document.createElement("canvas");
+                c.width = 1850;
+                c.height = 1600;
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#EEEEEE"
+                ctx.fillRect(0, 0, 1850, 1600);
+                ctx.drawImage(background, 0, 0);
+    
+                var dot = c.getContext("2d");
+                dot.beginPath();
+                dot.arc(200 + (1000 * (x_axis+10)/20), 1150 - (1000 * (y_axis + 10)/20), 25, 0, 2 * Math.PI);
+                dot.fillStyle = 'red';
+                dot.fill();
+                dot.stroke();
+    
+                var line = c.getContext("2d");
+                line.beginPath();
+                line.moveTo(1500, 1145 - (1000 * (z_axis + 10)/20));
+                line.lineTo(1650, 1145 - (1000 * (z_axis + 10)/20));
+                line.lineWidth = 10;
+                line.strokeStyle = "red";
+                line.stroke();
+    
+                ctx.font="50px Montserrat"
+                ctx.textAlign="center"
+                ctx.fillStyle="#222222"
+                ctx.fillText("消极-积极轴线 (x): " + x_axis, 725, 1375)
+                ctx.fillText("外在-内在轴线 (y): " + y_axis, 725, 1450)
+                ctx.fillText("有序-可变轴线 (z): " + z_axis, 725, 1525)
+                ctx.textAlign="right"
+                ctx.font="60px Montserrat"
+                ctx.fillText("Gendervalues.github.io", 1820, 1560)
+
+                document.getElementById("banner").src = c.toDataURL();
+            }
+            background.src = "./compass.png";
+		
+        }
+        </script>
+
+	    
+	    
+		
+    </body>
+    
