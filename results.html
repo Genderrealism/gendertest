@@ -1,13 +1,4 @@
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99715444-7"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-99715444-7');
-    </script>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
@@ -41,11 +32,11 @@
         <h3 class="subheading">这些坐标有什么含义？</h2>
         <p class="description">
             <strong>y轴：性别的本质</strong><br>
-            <span class="description-detail">内在的：认为性别是天生的、深植于个体内部的本质属性，可能与大脑结构、基因、荷尔蒙或某种内在身份认同紧密相关。</span><br>
+            <span class="description-detail">内在的：认为性别是天生的、深植于个体内部的本质属性，可能与大脑结构、基因、荷尔蒙或某种内在观念认同紧密相关。</span><br>
             <span class="description-detail">外在的：认为性别主要是社会文化建构的产物，是通过社会互动、规范、期望和权力关系塑造和习得的，而非天生如此。</span><br><br>
 
             <strong>x轴：性别的作用：</strong><br>
-            <span class="description-detail">积极的：认为性别具有积极意义或功能，例如提供身份认同、社会秩序、文化多样性等。</span><br>
+            <span class="description-detail">积极的：认为性别主要具有积极意义或功能，例如提供身份认同、社会秩序、文化多样性等。</span><br>
             <span class="description-detail">消极的：认为性别主要带来压迫、限制、不平等或冲突，阻碍个体发展和社会公正。</span><br><br>
 
             <strong>z轴：性别的界限：</strong><br>
@@ -93,7 +84,7 @@
                 c.height = 1600;
                 var ctx = c.getContext("2d");
                 ctx.fillStyle = "#EEEEEE"
-                ctx.fillRect(0, 0, 1850, 1600);
+                ctx.fillRect(0, 0, 1850, 1700);
                 ctx.drawImage(background, 0, 0);
     
                 var dot = c.getContext("2d");
@@ -119,7 +110,7 @@
                 ctx.fillText("有序-可变轴线 (z): " + z_axis, 725, 1525)
                 ctx.textAlign="right"
                 ctx.font="60px Montserrat"
-                ctx.fillText("genderrealism.github.io/gendertest", 1820, 1560)
+                ctx.fillText("genderrealism.github.io/gendertest", 1820, 1660)
 
                 document.getElementById("banner").src = c.toDataURL();
             }
