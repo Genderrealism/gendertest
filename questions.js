@@ -1,5 +1,5 @@
 questions =  [
-    {"id": 0, "question": "你认为跨性别者是有错误身体的灵魂。", "effects": {"essentialist": 1}},
+    {"id": 0, "question": "你赞同跨性别者是“生错了身体的灵魂”或类似表述。", "effects": {"essentialist": 1}},
     {"id": 1, "question": "你认为你的性别妨碍了自我实现。", "effects": {"positive": -1}},
     {"id": 2, "question": "你认为男性可以有阴道。", "effects": {"rigid": -1}},
     {"id": 3, "question": "你认为理想的社会里关于性别的讨论应该减少甚至消失。", "effects": {"positive": -1}},
