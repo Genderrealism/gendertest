@@ -2,7 +2,7 @@ questions =  [
     {"id": 0, "question": "你认为跨性别者是有错误身体的灵魂。", "effects": {"essentialist": 1}},
     {"id": 1, "question": "你认为你的性别妨碍了自我实现。", "effects": {"positive": -1}},
     {"id": 2, "question": "你认为男性可以有阴道。", "effects": {"rigid": -1}},
-    {"id": 3, "question": "你认为如果所有关于性别的讨论完全消失，社会将变得更好。", "effects": {"positive": -1}},
+    {"id": 3, "question": "你认为理想的社会里关于性别的讨论应该减少甚至消失。", "effects": {"positive": -1}},
     {"id": 4, "question": "你认为圣女贞德这样不符合当时性别规范的人可以被视为跨性别。", "effects": {"rigid": -1}},
     {"id": 5, "question": "你认为个人的性别应该由法律明确规定。", "effects": {"rigid": 1}},
     {"id": 6, "question": "你认为跨性别认同形成可能与成长中的经历有关。", "effects": {"essentialist": -1}},
